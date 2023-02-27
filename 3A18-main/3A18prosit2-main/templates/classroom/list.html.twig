@@ -1,0 +1,20 @@
+<table border =1>
+<tr>
+    <th>ID</th>
+    <th>Name</th>
+  
+  </tr>
+{% for s in classroom %}
+<tr>
+<td>{{s.id}}</td>
+<td>{{s.Name}}</td>
+<td><a href={{path('delete_classroom',{'id':s.id})}}>Delete</a></td>
+<td><a href={{path('update_classroom',{'id':s.id})}}>Update</a></td>
+</tr>
+{% endfor %}
+</table>
+<a href="{{ path('add_classroom') }}">Add Classroom</a>
+
+
+
+

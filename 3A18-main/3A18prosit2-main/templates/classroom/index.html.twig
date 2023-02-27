@@ -1,0 +1,17 @@
+{% block body %}
+
+  <h1>Ajouter une classe</h1>
+
+  {{ form_start(form) }}
+
+  {{ form_errors(form) }}
+
+  {{ form_row(form.name, {'attr': {'class': 'form-control'}}) }}
+
+  {{ form_row(form._token) }}
+
+  <button type="submit" class="btn btn-primary">{{ form_label(form.save) }}</button>
+
+  {{ form_end(form) }}
+
+{% endblock %}
